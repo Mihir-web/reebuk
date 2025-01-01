@@ -3,6 +3,9 @@
   padding:0;
   box-sizing: border-box;
 }
+html{
+  scroll-padding-top: 150px;
+}
 body {
   font-family: "Lato", sans-serif;
 }
@@ -392,7 +395,7 @@ body {
   }
 }
 
-.highlight-text {
+.highlight-text.active {
   color: #ff9900;
   /* Matching orange */
   font-weight: bold;
@@ -747,3 +750,14 @@ body {
   }
 }
 
+.location-tabing button{
+  color: #fff;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: transparent;
+}
+
+.location-tabing-image{
+  border-radius: 12px;
+}

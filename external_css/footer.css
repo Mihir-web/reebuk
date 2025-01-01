@@ -6,6 +6,20 @@
   font-family: "Arial", sans-serif;
 }
 
+.footer-container .footer-links li a {
+  background-color: #26396c;
+  color: #ffffffcb;
+  text-decoration: none;
+  font-family: "Arial", sans-serif;
+}
+
+.footer-container .footer-links li a:hover {
+  background-color: #26396c;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Arial", sans-serif;
+}
+
 .footer-logo {
   display: flex;
   align-items: center;
