@@ -101,15 +101,22 @@
         }
 
         .navbar-toggler-icon {
-            background-image: url('assets/cross-icon.svg');  /* Cross icon */
-            transition:all 0.35s ease-in-out;
-        }
-
-/* When navbar is open, change icon to cross */
-.navbar-toggler.collapsed .navbar-toggler-icon {
-    background-image: url('assets/hamburger-icon.svg'); /* Default hamburger icon */
-    transition:all 0.35s ease-in-out;
+    background-image: url('assets/hamburger-icon.svg');  /* Default hamburger icon */
+    transition: all 0.35s ease-in-out;
+    background-size: contain; /* Ensure the icon fits */
+    background-repeat: no-repeat;
+    width: 30px; /* Adjust as needed */
+    height: 25px; /* Adjust as needed */
+    transition: all 0.35s ease-in-out;
 }
+
+/* Optional: Define the cross icon style */
+.navbar-toggler-icon.cross {
+    background-image: url('assets/cross-icon.svg');  /* Cross icon when expanded */
+    transition: all 0.35s ease-in-out;
+}
+
+
 
 @media only screen and (min-width: 1024px) {
 .first-header{
@@ -1436,6 +1443,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // Show the actual page content
     document.getElementById("content").style.display = "block";
 };
+
+$(document).ready(function () {
+    $('.navbar-toggler').on('click', function () {
+        // Toggle the 'cross' class based on the state of aria-expanded
+        if ($(this).attr('aria-expanded') === 'true') {
+            $(this).find('.navbar-toggler-icon').addClass('cross');
+        } else {
+            $(this).find('.navbar-toggler-icon').removeClass('cross');
+        }
+    });
+});
 
   
     </script>
