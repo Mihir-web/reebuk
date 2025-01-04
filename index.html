@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Favicons -->
+  <link href="assets/logo45.png" rel="icon">
+  <link href="assets/logo45.png" rel="apple-touch-icon">
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <meta name="description" content="Reebuk Health revolutionizes senior care with AI-driven technology, offering early detection of foot conditions like corns, calluses, and fungal infections to enhance mobility and quality of life.">
+    <title>AI-Powered Senior Foot Health Solutions | Reebuk Health</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    </link>
+    <link href="style.css" rel="stylesheet">
+    </link>
+    <link rel="stylesheet" href="external_css/home_page.css">
+    <link rel="stylesheet" href="external_css/timeline-section.css">
+    <link rel="stylesheet" href="external_css/ai-model.css">
+    <link rel="stylesheet" href="external_css/focus.css">
+    <link rel="stylesheet" href="external_css/work_page.css">
+    <link rel="stylesheet" href="external_css/reebuk-health.css">
+    <link rel="stylesheet" href="external_css/about_page.css">
+    <link rel="stylesheet" href="external_css/service_page.css">
+    <link rel="stylesheet" href="external_css/footer.css">
+    <link rel="stylesheet" href="external_css/vision_mission.css">
+    <link rel="stylesheet" href="external_css/matter_page.css">
+    <link rel="stylesheet" href="external_css/news.css">
+    <link rel="stylesheet" href="external_css/faq.css">
+
+    <link rel="stylesheet" href="external_css/icoonmoon.css">
+    <link rel="stylesheet" href="external_css/animation.css">
+
+    <style>
+        
+        * {
+            font-family: 'Lato' sans-serif;
+        }
+   
+
+        .main-header {
+            z-index: 9999;
+            left: 0;
+            right: 0;
+            top: 0;
+        }
+
+        .fixed.main-header {
+            position: fixed;
+            -webkit-animation: smoothScroll .5s forwards;
+            -khtml-animation: smoothScroll .5s forwards;
+            -moz-animation: smoothScroll .5s forwards;
+            -ms-animation: smoothScroll .5s forwards;
+            -o-animation: smoothScroll .5s forwards;
+            animation: smoothScroll .5s forwards;
+            -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+            -khtml-box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+            -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+            -ms-box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+            -o-box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+            box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+        }
+
+        @keyframes smoothScroll {
+            0% {
+                -webkit-transform: translateY(-100px);
+                -khtml-transform: translateY(-100px);
+                -moz-transform: translateY(-100px);
+                -ms-transform: translateY(-100px);
+                -o-transform: translateY(-100px);
+                transform: translateY(-100px);
+            }
+
+            100% {
+                -webkit-transform: translateY(0);
+                -khtml-transform: translateY(0);
+                -moz-transform: translateY(0);
+                -ms-transform: translateY(0);
+                -o-transform: translateY(0);
+                transform: translateY(0);
+            }
+        }
+
+
+        .navbar-nav .nav-item a {
+            color: #ffffffcb !important;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 40px;
+        }
+
+        .navbar-nav .nav-item a:hover, .navbar-nav .nav-item a.active {
+            color: #ffffff !important;
+        }
+
+        .nav-link {
+            padding: 10px 2px;
+            font-size: 16px
+        }
+
+        .navbar-toggler-icon {
+    background-image: url('assets/hamburger-icon.svg'); /* Default hamburger icon */
+    transition:all 0.35s ease-in-out;
+}
+
+/* When navbar is open, change icon to cross */
+.navbar-toggler.collapsed .navbar-toggler-icon {
+    background-image: url('assets/cross-icon.svg'); /* Cross icon */
+    transition:all 0.35s ease-in-out;
+}
+
+@media only screen and (min-width: 1024px) {
+.first-header{
+    padding-right:7% !important;
+}
+}
+
+/* Loader Container - Covers the entire page */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);  /* Transparent white background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;  /* Ensure the loader is above all content */
+}
+
+/* The loader itself (spinner) */
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey background */
+    border-top: 8px solid #284184; /* Blue spinner */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+/* Keyframes for spinner animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Hide the content by default until the page is fully loaded */
+#content {
+    display: none;
+}
+
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#main_navbar">
+    <!-- Loader Element -->
+    <div id="loader" class="loader-container">
+        <div class="loader"></div>
+    </div>
+    <header class="container-fluid main-header">
+        <nav class="bg-light">
+            <ul class="nav container-fluid  fs-6 px-lg-5 d-lg-flex justify-content-center first-header">
+                <li class="nav-item font-blue mx-2">
+                    <a class="nav-link" href="mailto:info@reebukhealth.com">
+                        <img data-src="assets/email.svg" alt="Email Icon" class="lazy w-20 h-20">
+                        <span class="font-blue">info@reebukhealth.com</span>
+                    </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="tel:+14168487032">
+                        <img data-src="assets/phone.svg" alt="Phone Icon" class="lazy w-20 h-20">
+                        <span class="font-blue">(+1) 416-848-7032</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav id="main_navbar" class="navbar navbar-expand-lg navbar-dark bg-nav px-lg-5 px-2">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img data-src="assets/logo.svg" alt="Reebuk Health" class="lazy h-60 w-60">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center mx-4" id="navbarNav">
+                    <ul class="navbar-nav nav fs-6">
+                        <li class="nav-item active mx-lg-2"><a class="nav-link active" href="#home">Home</a></li>
+                        <li class="nav-item  mx-lg-2"><a class="nav-link" href="#aiTech">Our AI Technology</a></li>
+                        <li class="nav-item mx-lg-2"><a class="nav-link" href="#howItWork">How It Works</a></li>
+                        <li class="nav-item mx-lg-2"><a class="nav-link" href="#about">About Us</a></li>
+                        <li class="nav-item mx-lg-2"><a class="nav-link" href="#services">Services</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="btn btn-primary coming-soon-btn-header">App Coming Soon</a>
+
+            </div>
+        </nav>
+    </header>
+    
+    <section class="container-fluid banner-bg custom-bg add-bg-image" id="home">
+        <div class="px-lg-5 px-2">
+
+
+            <!-- Content Section -->
+            <div class="row align-items-center  px-3 pt-4">
+                <!-- Text Content -->
+                <div class="logo-container mb-1 wow flipInX">
+                    <div class="logo">
+                        <img data-src="assets/logo45.png" class="lazy" alt="Reebuk Logo">
+                    </div>
+                    <div class="logo-text">
+                        <h2>Reebuk Health</h2>
+                        <p>From <span class="highlight">Universal Health Hub</span></p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row reverse-flex py-3">
+                <div class="col-md-6 px-2">
+                    
+                    <div class="mb-4">
+                        <h1 style="text-align: left;">
+                            Revolutionizing Senior Care with
+                            <span class="highlight">AI-Powered</span>
+                            <span class="">Healthcare Solutions</span>
+                        </h1>
+                        <svg width="85%" height="30" viewBox="0 0 100 10" xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="none">
+                            <path d="M0 5 Q 50 0, 100 5" stroke="rgba(224, 162, 86)" stroke-width="2" fill="none" />
+                        </svg>
+                    </div>
+
+                    <p style="text-align: left;">
+                        At Reebuk Health, we are redefining senior healthcare with cutting-edge Artificial Intelligence (AI) technology patented and developed inhouse.
+                    </p>
+
+
+
+
+                    <div class="info-container">
+                        <div class="info-box">
+                            <img data-src="assets/people.png" class="lazy" alt="Trusted Icon">
+                            <span>Trusted By 2.5M+</span>
+                        </div>
+                        <div class="info-box">
+                            <img data-src="assets/chip.png" class="lazy" alt="AI/ML Icon">
+                            <span>AI/ML Technology</span>
+                        </div>
+                    </div>
+                    <div class="btn-container" style="text-align: left;">
+                        <a href="#" class="btn btn-primary">App Coming Soon
+                            <!-- <img src="assets/download.png" alt="Download icon" class="icon-img"> -->
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Image Content -->
+                <div class="col-md-5 px-2 wow pulse">
+                    <img data-src="assets/Group1.png" alt="AI Health App" class="lazy img-fluid app-image">
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="container-fluid font-blue px-lg-5 px-3 py-5 position-relative" id="our-focus-section">
+        <img data-src="assets/Vector.png" alt="decorative icon" class="lazy top-right-icon">
+        <p class="heading-text heading-with-line"><span class="gradient-focus">Our Focus?</span></p>
+        <div class="row">
+            <div class="col-12 col-md-6 wow fadeIn">
+                <img data-src="assets/ourFocus.svg" alt="our focus" width="100%" class="lazy img-fluid content-img">
+            </div>
+            <div class="col-12 col-md-6 content-text fw-light wow fadeIn">
+                <p>Delivering accurate, early diagnosis of foot conditions that often go unnoticed in aging individuals. Using advanced Computer Vision, our proprietary AI model analyzes thousands of real-world images of foot conditions in seniors, identifying subtle signs of potential issues such as Corn, Callus, fungal infection and other problems before they escalate. This empowers healthcare professionals and family caregivers to detect issues early—enhancing care, preventing complications, and improving quality of life for aging individuals
+                    <br /><br /> This groundbreaking solution is the result of extensive training and collaboration with healthcare experts. By feeding our Machine Learning model with a diverse dataset of foot conditions across various stages, we’ve built an AI system that mimics the diagnostic accuracy of skilled healthcare professionals.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid banner-bg font-white px-lg-5 px-4 py-3" id="aiTech">
+        <p class="heading-text heading-with-line-white pb-lg-2 pb-1 mx-lg-0 mx-1"><span class="gradient">What is the AI model?</span></p>
+        <div class="row custom-p-row">
+            <div class="col-md-4 pb-lg-4 pb-1 px-lg-3 px-0 wow zoomIn">
+                <div class="card custom-card">
+                    <img data-src="assets/card1.png" class="lazy card-img-top p-3 what-ai-model" alt="card1" height="auto"
+                        width="80%">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Dataset Collection</b></h5>
+                        <p class="card-text">We feed our Machine Learning model with a wide variety of foot conditions
+                            across different
+                            stages.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 pb-lg-4 pb-1 px-lg-3 px-0 wow zoomIn">
+                <div class="card custom-card">
+                    <img data-src="assets/card2.png" class="lazy card-img-top p-3 what-ai-model" alt="card1" height="auto"
+                        width="80%">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Model Training</b></h5>
+                        <p class="card-text">The AI system learns from this diverse dataset to understand patterns and
+                            make accurate diagnoses.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 pb-lg-4 pb-1 px-lg-3 px-0 wow zoomIn">
+                <div class="card custom-card">
+                    <img data-src="assets/card3.png" class="lazy card-img-top p-3 what-ai-model" alt="card1" height="auto"
+                        width="80%">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Mimicking Expertise</b></h5>
+                        <p class="card-text">The AI learns to diagnose foot conditions with the same accuracy as
+                            experienced healthcare professionals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="pb-2 h3 pt-4">Want to try our AI model?</p>
+
+        <div class="afcdai-qr">
+            <div class="mx-lg-1 mx-0 app-qrcodes">
+                <div>
+                    <img data-src="assets/QRCode.png" class="lazy h-100 mx-1 wow bounceIn" alt="QR code" width="150" height="auto">
+                </div>
+                <div class="my-2 my-lg-0 my-md-0">
+                    <img data-src="assets/AppStore.png" class="lazy h-100 mx-1 wow bounceIn" alt="app store" width="150" height="auto">
+                </div>
+            </div>
+            <div class="mx-lg-1 mx-0 app-qrcodes">
+                <div>
+                    <img data-src="assets/QRCodeGP.png" class="lazy h-100 mx-1 wow bounceIn" alt="QR code" width="150" height="auto">
+                </div>
+                <div class="my-2 my-lg-0 my-md-0">
+                    <img data-src="assets/PlayStore.png" class="lazy h-100 mx-1 wow bounceIn" alt="app store" width="150" height="auto">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="responsive-container background-image p-lg-5 p-2" id="why-does-this-matter-section">
+        <!-- <div class="background-image"></div> Background container -->
+        <img data-src="assets/Vector.png" alt="Decorative Icon" class="lazy top-right-image" />
+        <!-- <img src="assets/BG.png" alt="Decorative Icon" class="left-bg-image" /> -->
+        <p class="responsive-heading">
+            <span class="custom-gradient">Why does this matter?</span>
+        </p>
+        <p class="responsive-content">
+            Foot health is critical to the overall well-being of seniors, directly impacting mobility, independence, and quality of life. Our AI technology empowers healthcare providers with actionable insights, enabling them to offer timely, personalized care.
+        </p>
+
+        <div id="healthCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="carousel-content">
+                        <h5><strong>1. Foot Health and Fall Risk: Corns, Calluses, and Foot Pain.</strong></h5>
+                        <ul>
+                            <li><strong>Elderly individuals with foot pain were nearly 2.5 times more likely to experience falls</strong> than those without pain.</li>
+                            <li><strong>Falls are the leading cause of injury-related hospital admissions</strong> for older adults. According to the CDC, falls cause over <strong>3 million emergency department visits annually</strong> for older adults, many of which are linked to preventable foot health issues.</li>
+                            <li><strong>A study in the British Journal of Pain</strong> concluded that people with foot pain or conditions like corns were <strong>two to four times more likely to experience a fall</strong>. These minor deformities can also lead to the development of more serious complications, including infections.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <h5><strong>2. Fungal Infections and Infections in General:</strong></h5>
+                        <ul>
+                            <li><strong>Fungal infections</strong> (such as nail fungus) are prevalent in older adults, affecting about <strong>10-15% of the population over age 60</strong>. If left untreated, these infections can lead to <strong>severe dermatological issues and secondary infections</strong> (such as cellulitis), which may require hospitalization.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <h5><strong>3. Hospital Admissions:</strong></h5>
+                        <ul>
+                            <li>In seniors, foot infections (including fungal, bacterial, or diabetic foot ulcers) are a leading cause of hospitalization, especially in those with comorbidities such as diabetes or vascular disease. According to research in Clinical Infectious Diseases, about 40-60% of older adults with diabetic foot ulcers require hospitalization due to complications from infections.</li>
+                            <li>Hospitalization rates for foot-related issues are also elevated in those with neglected foot care, and <strong>early interventions</strong> such as regular inspections can reduce the need for emergency care. For instance, in elderly patients with diabetes, a study in <i>The Journal of Diabetes and its Complications</i> found that <strong>routine foot examinations can reduce hospitalization rates by 40-50%</strong> by catching issues before they progress to severe infections or amputations.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <h5><strong>4. Prevention and Health Costs:</strong></h5>
+                        <ul>
+                            <li><strong>Timely detection and intervention</strong> can significantly reduce the costs associated with long-term care. For example, <strong>early treatment of fungal infections and other foot conditions</strong> can lower the need for more expensive treatments like surgeries or hospital stays, reducing the financial burden on healthcare systems.</li>
+                            <li>According to <i>the National Institutes of Health</i>, foot problems in seniors can result in <strong>increased health care costs</strong> due to frequent doctor visits, treatments, medications, and hospital stays for complications from untreated conditions. Early interventions can reduce <strong>the cost burden by up to 40%</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <h5><strong>5. Impact of Regular Foot Care:</strong></h5>
+                        <ul>
+                            <li>In clinical practice, regular foot care—including routine assessments for corns, calluses, fungal infections, and diabetic ulcers—can significantly <strong>prevent complications</strong>. A review published in the <i>Journal of Aging Research</i> found <strong>that seniors who undergo regular foot care assessments have a 30-50% lower risk of falls, injuries, and hospital admissions</strong> related to foot complications compared to those who do not have such assessments.</li>
+                        </ul>
+                        <p>At Reebuk Health, we don’t just connect families with licensed healthcare professionals—we harness the power of technology to enhance lives. Our mission is to ensure that seniors receive the care they deserve, delivered with precision, convenience, and trust, wherever they age.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#healthCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#healthCarousel" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#healthCarousel" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#healthCarousel" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#healthCarousel" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container-fluid banner-bg font-white px-lg-5 px-3 py-3">
+        <div class="row custom-responsive-row py-3">
+            <div class="card mb-3 custom-responsive-card-1 wow fadeInDown">
+                <div class="row g-0 align-items-center custom-responsive-row">
+                    <div class="col-md-3 p-lg-4 px-2 py-4">
+                        <img data-src="assets/logo45.png" class="lazy img-fluid rounded-start custom-responsive-img" alt="logo"
+                            width="80%">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body custom-responsive-body">
+                            <h5 class="card-title custom-heading-white custom-heading-with-line"><span
+                                    class="custom-title-gradient-white">What is Reebuk Health</span></h5>
+                            <p class="card-text py-3 custom-content-white custom-responsive-text">
+                                At Reebuk Health, we revolutionize how families access healthcare services by bringing them directly to your doorstep. From Foot Care Nurses to Chiropodists and Physiotherapists, we connect you with trusted healthcare professionals, tailored to your needs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid font-blue px-5 py-3 position-relative" id="howItWork">
+        <img data-src="assets/Medical_Appointment.png" alt="Medical Appointment Icon" class="lazy top-right-img">
+        <p class="heading-text heading-with-line ps-4"><span class="gradient-work">How It Works?</span></p>
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-11 col-12">
+                <!-- <div class="row text-center content-text app-steps">
+            <div class=" col-md-3 mx-1 arrow-one">
+                <img src="assets/phone/ph-1.png" alt="phone 1" class="responsive-img w-75">
+                <p class="pt-4">1. Register on the REEBUK Health mobile app</p>
+            </div>
+            <div class="col-12 col-md-3 mx-1 arrow-two">
+                <img src="assets/phone/ph-2.png" alt="phone 2" class="responsive-img w-75">
+                <p class="pt-4">2. Using the AI Technology in the mobile app, diagnose the feet conditions</p>
+            </div>
+            <div class="col-12 col-md-3 mx-1">
+                <img src="assets/phone/ph-3.png" alt="phone 3" class="responsive-img w-75">
+                <p class="pt-4">3. Select the healthcare service you need.</p>
+            </div>
+            <div class="col-12 col-md-3 mx-1 arrow-one">
+                <img src="assets/phone/ph-4.png" alt="phone 4" class="responsive-img w-75">
+                <p class="pt-4">4. Compare professionals near you, read their bios, and view their fees.</p>
+            </div>
+            <div class="col-12 col-md-3 mx-1 arrow-two">
+                <img src="assets/phone/ph-5.png" alt="phone 5" class="responsive-img w-75">
+                <p class="pt-4">5. Book an appointment that fits your schedule and pay securely.</p>
+            </div>
+            <div class="col-12 col-md-3 mx-1">
+                <img src="assets/phone/ph-6.png" alt="phone 6" class="responsive-img w-75">
+                <p class="pt-4">6. Receive care in the comfort of your home or chosen location.</p>
+            </div>
+        </div> -->
+
+                <div class="text-center content-text app-steps">
+                    <div class="mx-1 arrow-one wow zoomIn">
+                        <img data-src="assets/phone/ph-1.png" alt="phone 1" class="lazy responsive-img w-75">
+                        <p class="pt-4 px-1">1. Register on the Reebuk Health mobile app.</p>
+                    </div>
+                    <div class="mx-1 arrow-two wow zoomIn">
+                        <img data-src="assets/phone/ph-2.png" alt="phone 2" class="lazy responsive-img w-75">
+                        <p class="pt-4 px-1">2. Using the AI Technology in the mobile app, diagnose the feet conditions
+                        </p>
+                    </div>
+                    <div class="mx-1 arrow-three wow zoomIn">
+                        <img data-src="assets/phone/ph-3.png" alt="phone 3" class="lazy responsive-img w-75">
+                        <p class="pt-4 px-1">3. Select the healthcare service you need.</p>
+                    </div>
+                    <div class="mx-1 arrow-one wow zoomIn">
+                        <img data-src="assets/phone/ph-4.png" alt="phone 4" class="lazy responsive-img w-75">
+                        <p class="pt-4 px-1">4. Compare professionals near you, read their bios, and view their fees.
+                        </p>
+                    </div>
+                    <div class="mx-1 arrow-two wow zoomIn">
+                        <img data-src="assets/phone/ph-5.png" alt="phone 5" class="lazy responsive-img w-75">
+                        <p class="pt-4 px-1">5. Book an appointment that fits your schedule and pay securely.</p>
+                    </div>
+                    <div class="mx-1 wow zoomIn">
+                        <img data-src="assets/phone/ph-6.png" alt="phone 6" class="lazy responsive-img w-75">
+                        <p class="pt-4 px-1">6. Receive care in the comfort of your home or chosen location.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container-fluid banner-bg font-white px-lg-5 px-3 py-3" id="why-reebuk-health-section">
+        <p class="heading-text heading-with-line-white pb-2 mx-2"><span class="gradient-health">Why Reebuk Health?</span></p>
+        <div class="row custom-p-row">
+            <div class="col-md-4 pb-4 px-3 wow fadeInUp">
+                <div class="card custom-card">
+                    <img data-src="assets/card4.png" class="lazy card-img-top p-3 what-ai-model" alt="card4" height="auto"
+                        width="80%">
+                    <div class="card-body">
+                        <h5 class="card-title">AI-Powered Healthcare Solutions</h5>
+                        <p class="card-text">We're more than just a booking platform. Our cutting-edge Artificial Intelligence (AI) technology, powered by advanced Computer Vision, supports healthcare professionals in providing faster and more accurate assessments. This means your healthcare journey begins with precision from the very first appointment.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 pb-4 px-3 wow fadeInDown">
+                <div class="card custom-card">
+                    <img data-src="assets/card5.png" class="lazy card-img-top p-3 what-ai-model" alt="card5" height="auto"
+                        width="80%">
+                    <div class="card-body">
+                        <h5 class="card-title">Trusted, Verified Professionals</h5>
+                        <p class="card-text">Your safety and peace of mind are our top priorities. Every healthcare professional on the Reebuk Health platform is thoroughly vetted, licensed, and verified through comprehensive credential checks. We ensure you or your loved ones receive care from qualified experts, whether at home, in hospitals, or long-term care facilities.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 pb-4 px-3 wow fadeInUp">
+                <div class="card custom-card">
+                    <img data-src="assets/card6.png" class="lazy card-img-top p-3 what-ai-model" alt="card6" height="auto"
+                        width="80%">
+                    <div class="card-body">
+                        <h5 class="card-title">Seamless Booking Experience</h5>
+                        <p class="card-text">Our user-friendly mobile app puts you in control. Choose the service you need, compare healthcare providers, book an appointment that fits your schedule, and make secure payments—all in a few simple steps. Need to reschedule or cancel? No problem. The process is just as easy and hassle-free.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid font-blue px-lg-5 px-3 py-3" id="about">
+        <p class="heading-text heading-with-line mx-1"><span class="gradient-about">About Us</span></p>
+        <p class="content-text fw-light custom-p-row mx-lg-4">Reebuk Health is proudly owned and operated by Universal Health Hub and led by our visionary CEO, Maya, a seasoned Foot Care Nurse, educator, and author. With over five years of experience serving seniors in personal and foot care, Maya has built a platform that empowers aging individuals with technology-driven healthcare solutions.</p>
+        <div class="row justify-content-center py-4 wow zoomIn">
+            <h3 class="text-center"><strong>Maya Nathani – Owner, Founder and a Visionary Leader in Senior Healthcare</strong></h3>
+            <h5 class="text-center mb-lg-4"><strong>From Cancer Survivor to Healthcare Innovator</strong></h5>
+            <div class="col-md-12 d-flex justify-content-center embed-responsive embed-responsive-16by9 ">
+                <iframe width="1224" height="450" src="https://www.youtube.com/embed/i7OTY3RTqBw?si=jCBkJBtL2kMGQmoP"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                    style="border-radius: 20px;"></iframe>
+            </div>
+        </div>
+        <p class="content-text fw-light custom-p-row mx-lg-4">Maya Nathani, Founder and CEO of Reebuk Health, is a Philanthropist, Author and Educator, Licensed Nurse and a Certified Foot Care Nurse. Maya has over a decade of experience in the Canadian healthcare industry. Maya has been recognized for her community service with prestigious accolades such as the Women Impact Award, Inspirational Leader Award, CSPN Annual Women in Leadership, Top 40 Under 40, Women in Leadership and many more.
+            <br/><br/>
+            After overcoming her own battle with cancer, Maya Nathani witnessed firsthand the challenges seniors face—complex health conditions, limited mobility, and lack of access to transportation. Inspired to make a difference, she founded Universal Health Hub, dedicated to delivering healthcare directly to seniors, wherever they call home.
+            <br/><br/>
+            Under Maya's Leadership, the parent company Universal Health Hub has transformed senior care, blending technology with compassion to enhance the well-being and dignity of aging individuals
+        </p>
+    </section>
+    <section class="timeline-section">
+        <h1 class="timeline-title">Our Story</h1>
+        <div class="timeline">
+            <!-- 2019 -->
+            <div class="timeline-item wow fadeInDown">
+                <div class="timeline-content left">
+                    <p class="m-0">Universal Health Hub was Founded to service seniors with Personal Care and Foot Care</p>
+                </div>
+                <div class="timeline-dot">+</div>
+                <div class="timeline-year right">2019</div>
+            </div>
+
+            <!-- 2022 -->
+            <div class="timeline-item wow fadeInDown">
+                <div class="timeline-year left">2022</div>
+                <div class="timeline-dot">+</div>
+                <div class="timeline-content right">
+                    <p class="m-0">Universal Health Hub provides education and training to nurses in Foot Care</p>
+                </div>
+            </div>
+
+            <!-- 2024 -->
+            <div class="timeline-item wow fadeInDown">
+                <div class="timeline-content left">
+                    <p class="m-0">Universal Health Hub launches Reebuk Health to collaborate with healthcare professionals and use
+                        Artificial Intelligence Technology to build proprietary Machine Learning Models to detect health
+                        issues early</p>
+                </div>
+                <div class="timeline-dot">+</div>
+                <div class="timeline-year right">2024</div>
+            </div>
+
+            <!-- 2025 -->
+            <div class="timeline-item wow fadeInDown">
+                <div class="timeline-year left">2025</div>
+                <div class="timeline-dot">+</div>
+                <div class="timeline-content right">
+                    <p class="m-0">Reebuk Health launches a mobile platform for patients and family caregivers to book appointments
+                        with licensed healthcare professionals; at their location and at their preferred schedule</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid custom-section-blue px-lg-5 px-3 py-3">
+        <div class="row custom-responsive-row py-3 wow fadeInDown">
+            <div class="card mb-3 custom-responsive-card-2">
+                <div class="row g-0 align-items-center custom-responsive-row">
+                    <div class="col-md-3 px-2 py-4">
+                        <img data-src="assets/45.png" class="lazy img-fluid rounded-start custom-responsive-img" alt="logo"
+                            width="80%">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body custom-responsive-body">
+                            <h5 class="card-title custom-heading custom-heading-with-line"><span
+                                    class="custom-title-gradient">Vision</span></h5>
+                            <p class="card-text py-3 custom-content custom-responsive-text">
+                                To leverage innovative technology that enhances the quality of life for aging individuals, fostering a supportive community where everyone feels valued and respected.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row custom-responsive-row py-3 wow fadeInDown">
+            <div class="card mb-3 custom-responsive-card-2">
+                <div class="row g-0 align-items-center custom-responsive-row">
+                    <div class="col-md-3 px-2 py-4">
+                        <img data-src="assets/46.png" class="lazy img-fluid rounded-start custom-responsive-img" alt="logo"
+                            width="80%">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body custom-responsive-body">
+                            <h5 class="card-title custom-heading custom-heading-with-line"><span
+                                    class="custom-title-gradient">Mission</span></h5>
+                            <p class="card-text py-3 custom-content custom-responsive-text">
+                                We aim to make exceptional healthcare services accessible, trustworthy, and convenient for aging individuals and their families. By integrating technology and collaborating with hospitals, rehabilitation centers, government healthcare programs, and assisted living facilities, we strive to uphold the dignity and well-being of those we serve.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid banner-bg font-white px-lg-5 px-3 py-3 services-section" id="services">
+        <p class="font-42 heading-with-line-white ps-4 pb-2 py-3"><span class="gradient-services">Services</span></p>
+        <div class="">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item custom-accordion-item">
+                    <h2 class="accordion-header wow flipInX" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Foot Care Nurse - Available Now
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>What patients can expect in a Foot Care Appointment by Nurse?</strong>
+                            <div class="p-3 row">
+                                <div class="col-md-12">
+                                    <iframe width="auto" height="695" src="https://www.youtube.com/embed//9HLKsgYfDNI?si=Af3iaKHRYTBVbefM"
+                                        title="Day in the Life of a Footcare Nurse" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                                        style="border-radius: 20px;"></iframe>
+                                </div>
+                            </div>
+                            <div>
+                                <strong>How is this Foot Care different from Pedicure</strong>
+                                <ul>
+                                    <li>Foot Care is a medical service by a nurse and NOT a spa pedicure.</li>
+                                    <li>Appointment focusses NOT on “looking good” but focusses on “healthy feet”.</li>
+                                    <li>Foot Care Nurses focus on assessments problems and treatment of nails and feet.
+                                    </li>
+                                    <li>Service is provided by a licensed Nurse.</li>
+                                    <li>Unlike spa pedicure, you can expense the invoice with your insurance; as long as you have coverage.</li>
+                                    <li>Nurses follow Nursing guidelines for sterilization to avoid infection.</li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <strong>Where you can book appointments</strong>
+                                <div class="col-md-12">
+                                    <ul class="appointmentsUl">
+                                        <li>Home</li>
+                                        <li>Hospitals</li>
+                                        <li>Reactivation Care Centre</li>
+                                        <li>Long Term Care Home</li>
+                                        <li>Retirement Homes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="align-items-center p-lg-2 features">
+                                <div class="d-flex justify-content-center">
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link active" id="services-tab" data-bs-toggle="tab"
+                                                data-bs-target="#services_tab" role="tab" aria-controls="services"
+                                                aria-selected="true">Our Mobile Services</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="location-tab" data-bs-toggle="tab"
+                                                data-bs-target="#location" role="tab" aria-controls="location"
+                                                aria-selected="false">Locations we serve</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="services_tab" role="tabpanel"
+                                        aria-labelledby="services-tab">
+                                        <div class="container text-center">
+                                            <p class="mx-auto text-center">Our mobile services at Hospitals and Rehabs -
+                                                Reactivation Care Centres <br />
+                                                We understand that seniors need personal care and Foot Care (Nail care)
+                                                at Hospitals and Rehab. So our Personal Care Workers (PSW) and Foot Care
+                                                Nurses come to you at Reactivation Care Centres (Finch site, Church Site
+                                                and more) and Hospitals such as</p>
+                                        </div>
+                                        <div class="container-fluid py-5">
+                                            <div class="">
+                                                <span class="badge-custom">
+                                                    <img data-src="assets/hospitalicon.svg" alt="icon"
+                                                        class="lazy h-20 w-20 pe-2">Humber River Hospital
+                                                </span>
+                                                <span class="badge-custom">
+                                                    <img data-src="assets/hospitalicon.svg" alt="icon"
+                                                        class="lazy h-20 w-20 pe-2"> North York General Hospital (NYGH)
+                                                </span>
+                                                <span class="badge-custom">
+                                                    <img data-src="assets/hospitalicon.svg" alt="icon"
+                                                        class="lazy h-20 w-20 pe-2"> Cortellucci Vaughan Hospital
+                                                </span>
+                                                <span class="badge-custom">
+                                                    <img data-src="assets/hospitalicon.svg" alt="icon"
+                                                        class="lazy h-20 w-20 pe-2"> Markham Stouffville Hospital (MSH)
+                                                </span>
+                                                <span class="badge-custom">
+                                                    <img data-src="assets/hospitalicon.svg" alt="icon"
+                                                        class="lazy h-20 w-20 pe-2"> SouthLake Regional Health Centre
+                                                </span>
+                                                <span class="badge-custom">
+                                                    <img data-src="assets/hospitalicon.svg" alt="icon"
+                                                        class="lazy h-20 w-20 pe-2"> Sunnybrook
+                                                </span>
+                                                <span class="badge-custom">
+                                                    <img data-src="assets/hospitalicon.svg" alt="icon"
+                                                        class="lazy h-20 w-20 pe-2"> Trillium Health Partners
+                                                </span>
+                                                <span class="badge-custom">
+                                                    <img data-src="assets/hospitalicon.svg" alt="icon"
+                                                        class="lazy h-20 w-20 pe-2"> William Osler Health System
+                                                </span>
+                                                <span class="badge-custom">
+                                                    <img data-src="assets/hospitalicon.svg" alt="icon"
+                                                        class="lazy h-20 w-20 pe-2"> Oak Valley Health
+                                                </span>
+                                                <span class="badge-custom">
+                                                    <img data-src="assets/hospitalicon.svg" alt="icon"
+                                                        class="lazy h-20 w-20 pe-2"> St Joseph's
+                                                </span>
+                                                <span class="badge-custom">
+                                                    <img data-src="assets/hospitalicon.svg" alt="icon"
+                                                        class="lazy h-20 w-20 pe-2"> Mackenzie Health
+                                                </span>
+                                                <span class="badge-custom">And More</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="location" role="tabpanel"
+                                        aria-labelledby="location-tab">
+                                        <div class="container text-center">
+                                            <p class="mx-auto text-center" style="width: 60%;">We bring home care to
+                                                families in entire Toronto and GTA including Peel, York, Durham and
+                                                more. We are Headquartered in Markham, ON. We service 6 regions in
+                                                CCAC/LHIN:</p>
+                                        </div>
+                                        <!----------------------------------------->
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <!-- Images Section -->
+                                            <div class="pe-3 tab-content">
+                                                <img data-src="assets/central.png" class="lazy tab-pane fade show active location-tabing-image" id="central_map" alt="Map of Locations" height="220" />
+                                                <img data-src="assets/toronto-central.png" class="lazy tab-pane fade location-tabing-image" id="toronto_central_map" alt="Map of Locations" height="220" />
+                                                <img data-src="assets/central-west.png" class="lazytab-pane fade location-tabing-image" id="central_west_map" alt="Map of Locations" height="220" />
+                                                <img data-src="assets/central-east.png" class="lazy tab-pane fade location-tabing-image" id="central_east_map" alt="Map of Locations" height="220" />
+                                                <img data-src="assets/mississuga-halton.png" class="lazy tab-pane fade location-tabing-image" id="mississauga_map" alt="Map of Locations" height="220" />
+                                                <img data-src="assets/hamilton.png" class="lazy tab-pane fade location-tabing-image" id="hamilton_map" alt="Map of Locations" height="220" />
+                                            </div>
+                                            
+                                            <!-- Tab List Section -->
+                                            <div>
+                                                <ul class="nav flex-column" role="tablist">
+                                                    <li class="location-tabing">
+                                                        <button class="highlight-text active" data-bs-toggle="tab" data-bs-target="#central_map" role="tab" aria-controls="central_map" aria-selected="true">Central</button>
+                                                    </li>
+                                                    <li class="location-tabing">
+                                                        <button class="highlight-text" data-bs-toggle="tab" data-bs-target="#toronto_central_map" role="tab" aria-controls="toronto_central_map" aria-selected="false">Toronto Central</button>
+                                                    </li>
+                                                    <li class="location-tabing">
+                                                        <button class="highlight-text" data-bs-toggle="tab" data-bs-target="#central_west_map" role="tab" aria-controls="central_west_map" aria-selected="false">Central West</button>
+                                                    </li>
+                                                    <li class="location-tabing">
+                                                        <button class="highlight-text" data-bs-toggle="tab" data-bs-target="#central_east_map" role="tab" aria-controls="central_east_map" aria-selected="false">Central East</button>
+                                                    </li>
+                                                    <li class="location-tabing">
+                                                        <button class="highlight-text" data-bs-toggle="tab" data-bs-target="#mississauga_map" role="tab" aria-controls="mississauga_map" aria-selected="false">Mississauga Halton</button>
+                                                    </li>
+                                                    <li class="location-tabing">
+                                                        <button class="highlight-text" data-bs-toggle="tab" data-bs-target="#hamilton_map" role="tab" aria-controls="hamilton_map" aria-selected="false">Hamilton Niagara Haldimand Brant</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!----------------------------------------->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item custom-accordion-item">
+                    <h2 class="accordion-header wow flipInX" id="headingTwo">
+                        <button class="accordion-button collapsed custom-hide-icon" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                            aria-controls="collapseTwo" disabled>
+                            Chiropody - Coming Soon
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item custom-accordion-item">
+                    <h2 class="accordion-header wow flipInX" id="headingThree">
+                        <button class="accordion-button collapsed custom-hide-icon" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                            aria-controls="collapseThree" disabled>
+                            Physiotherapy - Coming Soon
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item custom-accordion-item">
+                    <h2 class="accordion-header wow flipInX" id="headingFour">
+                        <button class="accordion-button collapsed custom-hide-icon" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                            aria-controls="collapseFour" disabled>
+                            Physiotherapy - Coming Soon
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="bg-dna-image">
+        <section class="container-fluid font-blue px-lg-5 px-3 py-3 position-relative-news">
+            <img data-src="assets/Medical_Appointment.png" alt="Top Right Decoration" class="lazy top-right-img-news-custom">
+            <p class="font-64 heading-with-line ps-4"><span class="gradient-news-custom">In the News</span></p>
+            <!-- Bootstrap Carousel -->
+            <div id="carouselExample" class="carousel slide container" data-bs-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators carousel-indicators-custom px-4">
+                    <!-- <li data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></li> -->
+                    <!-- <li data-bs-target="#carouselExample" data-bs-slide-to="1"></li> -->
+                    <!-- <li data-bs-target="#carouselExample" data-bs-slide-to="2"></li> -->
+                </ol>
+
+                <!-- Carousel Content -->
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="container p-0">
+                            <div class="row justify-content-start">
+                                <!-- Card 1 -->
+                                <div class="col-md-4 mb-4 px-lg-3">
+                                    <div class="card custom-card-news">
+                                        <a href="https://wimtach.centennialcollege.ca/?p=11617" target="_blank">
+                                        <img data-src="assets/news2.png" class="lazy card-img-top p-3" alt="card5">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Revolutionizing senior care with #AI.</h5>
+                                            <p class="card-text my-3">
+                                                Universal Health Hub is pioneering early detection of foot health issues through an innovative AI-powered platform with cutting-edge research and industry collaborations. Together, Reebuk Health under Universal Health Hub is enhancing lives, reducing hospitalizations, and transforming healthcare for seniors worldwide. 🚀
+                                            </p>
+                                            <a href="https://wimtach.centennialcollege.ca/?p=11617" class="read_more_link" target="_blank">Read More</a>
+                                        </div>
+                                    </a>
+                                    </div>
+                                </div>
+
+                                <!-- Card 2 -->
+                                <div class="col-md-4 mb-4 px-lg-3">
+                                    <div class="card custom-card-news">
+                                        <a href="https://canadianimmigrant.ca/living/women/maya-nathani-from-cancer-survivor-to-healthcare-innovator" target="_blank">
+                                        <img data-src="assets/news1.png" class="lazy card-img-top p-3" alt="card4">
+                                        <div class="card-body">
+                                            <h5 class="card-title">From Cancer Survivor to Healthcare Innovator
+                                            </h5>
+                                            <p class="card-text my-3">Maya Nathani, a cancer survivor, turned adversity into innovation, founding a healthcare startup focused on improving patient care. Maya’s resilience and determination are driving impactful innovations in the medical field, empowering lives and redefining healthcare solutions.</p>
+                                            <a href="https://canadianimmigrant.ca/living/women/maya-nathani-from-cancer-survivor-to-healthcare-innovator" class="read_more_link" target="_blank">Read More</a>
+                                        </div>
+                                    </a>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card 3 -->
+                                <!-- <div class="col-md-4 mb-4 px-lg-3">
+                                    <div class="card custom-card-news">
+                                        <img data-src="assets/card6.png" class="lazy card-img-top p-3" alt="card6">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Seamless Booking Experience</h5>
+                                            <p class="card-text">Our app lets you easily choose services, compare
+                                                providers, book appointments, and make secure payments. Need to
+                                                reschedule or cancel? It's simple and hassle-free.</p>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Slides (if needed) -->
+                    
+                    
+                </div>
+
+                <div class="carousel-pagination-container mx-5">
+                    <!-- Previous Button -->
+                    <!-- <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true">&lt;</span>
+                        <span class="visually-hidden">Previous</span>
+                    </a> -->
+
+                    <!-- Pagination Text -->
+                    <!-- <div class="pagination-text">
+                        <span id="pagination">1 / 3</span>
+                    </div> -->
+
+                    <!-- Next Button -->
+                    <!-- <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true">&gt;</span>
+                        <span class="visually-hidden">Next</span>
+                    </a> -->
+                </div>
+
+
+            </div>
+        </section>
+        <section id="faq-section" class="container-fluid font-blue px-lg-5 px-3 py-3">
+            <p class="font-64 heading-with-line ps-4"><span class="gradient-faq">FAQ</span></p>
+            <div class="align-items-center p-lg-2 features">
+                <div class="d-flex justify-content-center">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist" style="background-color: #F4F9FF;">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link nav-link-custom active" id="patients-tab" data-bs-toggle="tab"
+                                data-bs-target="#patients" role="tab" aria-controls="patients" aria-selected="true">For
+                                Patients</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link nav-link-custom" id="providers-tab" data-bs-toggle="tab"
+                                data-bs-target="#providers" role="tab" aria-controls="providers"
+                                aria-selected="false">For
+                                Providers</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="patients" role="tabpanel" aria-labelledby="patients-tab">
+                        <div class="">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item custom-accordion-item-2">
+                                    <h2 class="accordion-header wow fadeInDown" id="headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faqcollapseOne"
+                                            aria-expanded="false" aria-controls="collapseOne">
+                                            Can I book the appointment over phone?
+                                        </button>
+                                    </h2>
+                                    <div id="faqcollapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            No. you can only book appointment over the mobile app.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item custom-accordion-item-2">
+                                    <h2 class="accordion-header wow fadeInDown" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faqcollapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Are the Foot Care Nurses trusted and registered?
+                                        </button>
+                                    </h2>
+                                    <div id="faqcollapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Yes. Reebuk Health ensures that we register the Foot Care Nurses only after
+                                            verifying their registration and Identity.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item custom-accordion-item-2">
+                                    <h2 class="accordion-header wow fadeInDown" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faqcollapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            How much does it cost for the appointment?
+                                        </button>
+                                    </h2>
+                                    <div id="faqcollapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            The cost of the appointment varies from $60 to $200 depending on the foot
+                                            care nurse experience, nurse rating, location of service and the hourly rate
+                                            demanded by the Foot Care Nurse.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item custom-accordion-item-2">
+                                    <h2 class="accordion-header wow fadeInDown" id="headingFour">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faqcollapseFour"
+                                            aria-expanded="false" aria-controls="collapseFour">
+                                            How long does it take to get an appointment?
+                                        </button>
+                                    </h2>
+                                    <div id="faqcollapseFour" class="accordion-collapse collapse"
+                                        aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            You could get an appointment as quickly as 24 hours and sometimes it could
+                                            take few days. It all depends on your availability and the availability of
+                                            the nurses.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="faqcollapse">
+                                    <div class="accordion-item custom-accordion-item-2">
+                                        <h2 class="accordion-header wow fadeInDown" id="headingfive">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqcollapseFive"
+                                                aria-expanded="false" aria-controls="collapseFive">
+                                                Do I or my family have to be present for the appointment?
+                                            </button>
+                                        </h2>
+                                        <div id="faqcollapseFive" class="accordion-collapse collapse"
+                                            aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                It is advisable however not required for PoA (Power of Attorney) or
+                                                family member to be present at the time for the appointment. When
+                                                booking the appointment, detailed instructions are collected and shared
+                                                with the foot care nurse.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item custom-accordion-item-2">
+                                        <h2 class="accordion-header wow fadeInDown" id="headingSix">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqcollapseSix"
+                                                aria-expanded="false" aria-controls="collapseSix">
+                                                What if a family member wants to be present at the appointment?
+                                            </button>
+                                        </h2>
+                                        <div id="faqcollapseSix" class="accordion-collapse collapse"
+                                            aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Sure. When appointment is booked, you already have a time window given
+                                                for the appointment. Please ensure family member is present for the
+                                                given time window. The nurse won't wait for the family member. The nurse
+                                                has to get started with the appointment as soon as the nurse arrives. If
+                                                patient needs 5 to 10 min to prepare and be ready for the appointment
+                                                after nurse arrives, then that is acceptable and nurse would give that
+                                                10 min time for the patient to be ready for the appointment.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item custom-accordion-item-2">
+                                        <h2 class="accordion-header wow fadeInDown" id="headingseven">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqcollapseSeven"
+                                                aria-expanded="false" aria-controls="collapseSeven">
+                                                How long does the appointment take?
+                                            </button>
+                                        </h2>
+                                        <div id="faqcollapseSeven" class="accordion-collapse collapse"
+                                            aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                The appointment could take anywhere from 45 min to 1 hour; depending on the feet condition.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item custom-accordion-item-2">
+                                        <h2 class="accordion-header wow fadeInDown" id="headingeight">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqcollapseEight"
+                                                aria-expanded="false" aria-controls="collapseEight">
+                                                How do I pay for the appointment?
+                                            </button>
+                                        </h2>
+                                        <div id="faqcollapseEight" class="accordion-collapse collapse"
+                                            aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                You pay with credit card or Apple pay. Only after payment is successful, the appointment is confirmed.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item custom-accordion-item-2">
+                                        <h2 class="accordion-header wow fadeInDown" id="headingnine">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqcollapseNine"
+                                                aria-expanded="false" aria-controls="collapseNine">
+                                                When do I pay for the appointment?
+                                            </button>
+                                        </h2>
+                                        <div id="faqcollapseNine" class="accordion-collapse collapse"
+                                            aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                When booking the appointment, the mobile app asks you to pay with credit card or Apple pay. Only after payment is successful, the appointment is confirmed.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item custom-accordion-item-2">
+                                        <h2 class="accordion-header wow fadeInDown" id="headingten">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqcollapseTen"
+                                                aria-expanded="false" aria-controls="collapseTen">
+                                                Do I get an invoice for the appointment?
+                                            </button>
+                                        </h2>
+                                        <div id="faqcollapseTen" class="accordion-collapse collapse"
+                                            aria-labelledby="headingten" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Yes, after the appointment is complete; you will see the invoice in your mobile app account.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item custom-accordion-item-2">
+                                        <h2 class="accordion-header wow fadeInDown" id="headingeleven">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqcollapseEleven"
+                                                aria-expanded="false" aria-controls="collapseEleven">
+                                                Do you do the appointments at home?
+                                            </button>
+                                        </h2>
+                                        <div id="faqcollapseEleven" class="accordion-collapse collapse"
+                                            aria-labelledby="headingeleven" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Yes, you could book the appointment at home, Hospital, Reactivation Care Centre/RCC, Long Term Care and Retirement Homes.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item custom-accordion-item-2">
+                                        <h2 class="accordion-header wow fadeInDown" id="headingtwelve">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqcollapseTwelve"
+                                                aria-expanded="false" aria-controls="collapseTwelve">
+                                                Which neighbourhoods do you service?
+                                            </button>
+                                        </h2>
+                                        <div id="faqcollapseTwelve" class="accordion-collapse collapse"
+                                            aria-labelledby="headingeltwelve" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                The service areas depend on the foot care nurses in your area. Today, the mobile app has several foot care nurses registered in the Toronto and the Greater Toronto Area. However we continue to add more foot care nurses across Ontario and across Canada.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item custom-accordion-item-2">
+                                        <h2 class="accordion-header wow fadeInDown" id="headingthirteen">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqcollapseThirteen"
+                                                aria-expanded="false" aria-controls="collapseThirteen">
+                                                What is included in the foot care appointment?
+                                            </button>
+                                        </h2>
+                                        <div id="faqcollapseThirteen" class="accordion-collapse collapse"
+                                            aria-labelledby="headingelthirteen" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                The 45-minute to one-hour appointment could includes cutting toenails, treating any corn or callus, thick fungal toenails, and ingrown toenails. However, the service experience from different foot care nurses may be different. All foot care nurses follow the nursing guidelines of their regulatory body.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item custom-accordion-item-2">
+                                        <h2 class="accordion-header wow fadeInDown" id="headingfourteen">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqcollapseFourteen"
+                                                aria-expanded="false" aria-controls="collapseFourteen">
+                                                Can I book appointments at Reactivation Care Centre Rehab or RCC and Hospitals?
+                                            </button>
+                                        </h2>
+                                        <div id="faqcollapseFourteen" class="accordion-collapse collapse"
+                                            aria-labelledby="headingelfourteen" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Yes, you could book the appointment at home, Hospital, Reactivation Care Centre/RCC, Long Term Care and Retirement Homes
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item custom-accordion-item-2">
+                                        <h2 class="accordion-header wow fadeInDown" id="headingfifthteen">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqcollapseFifthteen"
+                                                aria-expanded="false" aria-controls="collapseFifthteen">
+                                                How is my personal information like address, phone and credit card information protected?
+                                            </button>
+                                        </h2>
+                                        <div id="faqcollapseFifthteen" class="accordion-collapse collapse"
+                                            aria-labelledby="headingelfifthteen" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                The mobile app does NOT share your phone number or billing address with the foot care nurse. Only the service address is shared. The service address and billing address may be same at times. Reebuk Health strongly discourages engaging foot care nurses for services outside of the service booked on the mobile app.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item custom-accordion-item-2">
+                                        <h2 class="accordion-header wow fadeInDown" id="headingsixteen">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqcollapsesixteen"
+                                                aria-expanded="false" aria-controls="collapseSixteen">
+                                                Can I reschedule or cancel my appointment?
+                                            </button>
+                                        </h2>
+                                        <div id="faqcollapsesixteen" class="accordion-collapse collapse"
+                                            aria-labelledby="headingelsixteen" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                Yes you can reschedule or cancel your booked appointment; however there is a small fee to reschedule or cancel appointments with less than 24 hours notice.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item custom-accordion-item-2">
+                                        <h2 class="accordion-header wow fadeInDown" id="headingseventeen">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#faqcollapseSeventeen"
+                                                aria-expanded="false" aria-controls="collapseSeventeen">
+                                                What if the foot care nurse cancels the appointment?
+                                            </button>
+                                        </h2>
+                                        <div id="faqcollapseSeventeen" class="accordion-collapse collapse"
+                                            aria-labelledby="headingelseventeen" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                You will be notified and asked to rebook appointment if the foot care nurse cancels the appointment. You will not be charged any fee to rebook for the appointment cancelled by the foot care nurse.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container text-center">
+                            <p class="text-decoration-underline read_more_less_btn" data-bs-toggle="collapse"
+                                href="#faqcollapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Read More</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="providers" role="tabpanel" aria-labelledby="providers-tab">
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <section class="footer-container">
+        <div class="row">
+            <!-- Left Section: Logo and Contact Info -->
+            <div class="col-md-5">
+                <div class="footer-logo">
+                    <img data-src="assets/logo.svg" class="lazy" alt="ReeBuk Health Logo">
+                    <p>ReeBuk Health</p>
+                </div>
+                <div class="footer-info">
+                    <p><strong>Headquarters:</strong> Suite #1005, 3601 Hwy 7 E, Markham, ON L3R 0M3</p>
+                    <p><strong>Call Us:</strong> (+1) 416-848-7032</p>
+                    <p><strong>Email Us:</strong> Info@ReebukHealth.com</p>
+                </div>
+            </div>
+
+            <!-- Center Section: Links -->
+            <div class="col-md-3 footer-links">
+                <ul>
+                    <li><strong>Links</strong></li>
+                    <li><a href="#our-focus-section">Our Focus</a></li>
+                    <li><a href="#why-does-this-matter-section">Why does this matter?</a></li>
+                    <li><a href="#howItWork">How It Works?</a></li>
+                    <li><a href="#why-reebuk-health-section">Why Reebuk Health?</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#faq-section">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Right Section: QR Codes and Download Links -->
+            <div class="col-md-4">
+                <!-- <p>Download App</p> -->
+                <h1>App Coming Soon</h1>
+                <!-- <div class="row ">
+                    <div class="col-6 text-center">
+                        <img src="assets/QRCode.png" alt="App QR Code" class="img-fluid">
+                        <img src="assets/AppStore.png" alt="App Store" class="img-fluid">
+                    </div>
+                    <div class="col-6 text-center">
+                        <img src="assets/QRCodeGP.png" alt="Google Play QR Code" class="img-fluid">
+                        <img src="assets/PlayStore.png" alt="Google Play" class="img-fluid">
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <hr />
+
+        <!-- Footer Bottom Section -->
+        <div class="row pt-2">
+            <div class="col-md-6">
+                <p>© 2024 ReeBuk Health. All rights reserved</p>
+            </div>
+            <div class="col-md-6 footer-social-icons">
+                <img data-src="assets/Socialicon1.png" class="lazy" alt="Social Icon 1">
+                <img data-src="assets/Socialicon2.png" class="lazy" alt="Social Icon 2">
+                <img data-src="assets/Socialicon3.png" class="lazy" alt="Social Icon 3">
+                <img data-src="assets/Socialicon4.png" class="lazy" alt="Social Icon 4">
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.7.0/dist/lazyload.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <script src="js/wow.js"></script>
+    <script>
+        
+        $(document).ready(function() {
+            new WOW().init();
+        });
+
+        $(".navbar-nav a").on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            
+            $('html, body').animate({
+                scrollTop: $(this.hash).offset().top - 250
+            }, 1500, 'easeInOutExpo');
+            
+            if ($(this).parents('.navbar-nav').length) {
+                $('.navbar-nav .active').removeClass('active');
+                $(this).closest('a').addClass('active');
+            }
+        }
+    });
+
+        const carousel = document.querySelector('#carouselExample');
+        const pagination = document.getElementById('pagination');
+        const totalSlides = document.querySelectorAll('.carousel-item').length;
+
+        // Update pagination on slide change
+        carousel.addEventListener('slid.bs.carousel', function () {
+            const activeIndex = document.querySelector('.carousel-item.active');
+            const currentSlide = Array.from(activeIndex.parentElement.children).indexOf(activeIndex) + 1;
+            pagination.textContent = `${currentSlide} / ${totalSlides}`;
+        });
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= 1) {
+                $('header').addClass('fixed animated fadeInDown slow');
+
+            } else {
+                $('header').removeClass('fixed animated fadeInDown slow');
+
+            }
+        });
+
+        $('.read_more_less_btn').on('click', function () {
+            if (this.getAttribute('aria-expanded') === 'true') {
+
+                this.textContent = 'Read Less';
+            } else {
+
+                this.textContent = 'Read More';
+            }
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+    const lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy",
+        callback_load: function (img) {
+            const container = img.closest('.image-container');
+            container.querySelector('.loader').style.display = 'none'; // Hide loader
+            img.style.display = 'block'; // Show image
+        }
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-link");
+    const navbarCollapse = document.getElementById("navbarNav");
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        const navbarToggler = document.querySelector(".navbar-toggler");
+        if (navbarToggler.getAttribute("aria-expanded") === "true") {
+          new bootstrap.Collapse(navbarCollapse).hide();
+        }
+      });
+    });
+  });
+
+  
+  window.onload = function() {
+    // Hide the loader
+    document.getElementById("loader").style.display = "none";
+
+    // Show the actual page content
+    document.getElementById("content").style.display = "block";
+};
+
+  
+    </script>
+
+
+</body>
+
+</html>

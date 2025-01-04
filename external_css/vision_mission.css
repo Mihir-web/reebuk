@@ -1,0 +1,141 @@
+.custom-section-blue {
+  background-color: #f4f9ff;
+}
+
+.custom-responsive-row {
+  padding: 0 15px;
+}
+
+.custom-title-gradient {
+  font-size: 50px;
+  text-align: center;
+  color: #26396c;
+  background: linear-gradient(
+    to right,
+    rgba(38, 57, 108, 0.1),
+    rgba(38, 57, 108, 0)
+  );
+  display: inline-block;
+  padding: 0 10px;
+  border-left: 4px solid #26396c;
+  border-radius: 4px;
+  line-height: 1.2;
+  max-width: 100%;
+  word-wrap: break-word;
+  margin-left: -10px;
+}
+
+.custom-responsive-card-2 {
+  border-radius: 200px;
+  border: 2px solid #ddd;
+  background-color: #F4F9FF;
+  border-color: #B8D3FF;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.custom-responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.custom-responsive-body {
+  margin: 0;
+  padding: 35px;
+  margin-left: -90px;
+  box-sizing: border-box;
+}
+
+.custom-heading {
+  font-size: 28px;
+  color: #284184;
+  padding-right: 20%;
+  margin-bottom: 15px;
+  word-wrap: break-word;
+}
+
+.custom-heading-with-line {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  width: 100%;
+}
+
+.custom-heading-with-line::before {
+  content: "";
+  width: 4px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.custom-content {
+  font-size: 24px;
+  
+  color: #284184;
+  word-wrap: break-word;
+}
+
+@media (max-width: 576px) {
+  .custom-heading {
+    font-size: 24px;
+    padding-right: 10%;
+  }
+
+  .custom-content {
+    font-size: 14px;
+  }
+
+  .custom-responsive-body {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .custom-title-gradient {
+    font-size: 36px;
+  }
+
+  .custom-responsive-card-2 {
+    border-radius: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-heading {
+    font-size: 32px;
+  }
+
+  .custom-content {
+    font-size: 18px;
+  }
+
+  .custom-title-gradient {
+    font-size: 48px;
+  }
+
+  .custom-responsive-card-2 {
+    padding:0px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .custom-responsive-card-2 .card-title.custom-heading{
+    display: flex;
+    justify-content: center;
+  }
+
+  .custom-responsive-card-2 .card-title.custom-heading .custom-title-gradient{
+    border:none;
+    background: linear-gradient(
+      to right,
+      rgba(38, 57, 108, 0),
+      rgba(38, 57, 108, 0.1),
+      rgba(38, 57, 108, 0)
+    );
+  }
+  .custom-responsive-row {
+    padding: 0px;
+  }
+}
