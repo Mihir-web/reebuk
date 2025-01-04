@@ -116,9 +116,9 @@
     padding: 10px;
   }
 
-  .d-flex {
+  /* .d-flex {
     flex-direction: column !important;
-  }
+  } */
 
   .pe-3 {
     padding-right: 0 !important;
