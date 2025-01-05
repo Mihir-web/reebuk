@@ -120,6 +120,13 @@ position:relative;
   right:-26%;
 }
 
+@media (min-width:1200px){
+  .arrow-one:after{
+    width: 240px;
+    right:-28%;
+  }
+}
+
 .arrow-two{
   position:relative;
   }
@@ -167,7 +174,7 @@ position:relative;
   .arrow-one:after, .arrow-three:after{
     position: absolute;
     content: "";
-    width: 150px;
+    width: 148px;
     height: auto;
     aspect-ratio: 16 / 9;
     background-image: url('../assets/arrow1.svg');
