@@ -122,8 +122,8 @@ position:relative;
 
 @media (min-width:1200px){
   .arrow-one:after, .arrow-two:after{
-    width: 240px;
-    right:-28%;
+    width: 240px !important;
+    right:-28% !important;
   }
 }
 
