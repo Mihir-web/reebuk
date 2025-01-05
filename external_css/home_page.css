@@ -44,6 +44,12 @@ h1 {
   /* line-height: 90px; */
 }
 
+@media(min-width: 1200px) {
+  h1 {
+  font-size: 55px;
+  }
+}
+
 h1 .underline {
   position: relative;
   display: inline-block;
