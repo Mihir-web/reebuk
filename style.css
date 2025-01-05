@@ -746,7 +746,7 @@ body {
 
 @media (min-width: 1440px) {
   .logo-container{
-    margin-bottom: -110px !important;
+    margin-bottom: -4% !important;
     margin-left: 6px;
   }
 }
