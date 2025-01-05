@@ -95,10 +95,10 @@
             color: #ffffff !important;
         }
 
-        /* .nav-link {
+         .nav-link {
             padding: 10px 2px;
             font-size: 16px
-        } */
+        }
 
         .navbar-toggler-icon {
     background-image: url('assets/hamburger-icon.svg');  /* Default hamburger icon */
@@ -118,7 +118,7 @@
 
 
 
-/* @media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
 .first-header{
     padding-right:7% !important;
     justify-content:center;
@@ -131,7 +131,7 @@
     justify-content: space-between;
     flex-direction: row !important;
 }
-} */
+} 
 
 /* Loader Container - Covers the entire page */
 .loader-container {
@@ -176,9 +176,10 @@
     <div id="loader" class="loader-container">
         <div class="loader"></div>
     </div>
+    <div id="web-page-content">
     <header class="container-fluid main-header">
         <nav class="bg-light">
-            <ul class="nav container-fluid fs-6 px-lg-5 d-flex justify-content-between first-header">
+            <ul class="nav container-fluid fs-6 px-lg-5  first-header">
                 <li class="nav-item font-blue mx-2">
                     <a class="nav-link" href="mailto:info@reebukhealth.com">
                         <img data-src="assets/email.svg" alt="Email Icon" class="lazy w-20 h-20">
@@ -1359,6 +1360,7 @@
     <section>
 
     </section>
+</div>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.7.0/dist/lazyload.min.js"></script>
@@ -1451,7 +1453,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("loader").style.display = "none";
 
     // Show the actual page content
-    document.getElementById("content").style.display = "block";
+    document.getElementById("web-page-content").style.display = "block";
 };
 
 $(document).ready(function () {
